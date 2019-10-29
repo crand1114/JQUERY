@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('#images').append('<img id="facebook" src="facebook.png" style="width: 100px; height: 100px"/>');
+            $('#images').append('<img id=instagram src="instagram.png" style="width: 100px; height: 100px"/>');
+            $('#images').append('<img id="twitter" src="twitter.png"style="width: 100px; height: 100px" />');
+            $('#images').append('<img id="reddit" src="reddit.png" style="width: 100px; height: 100px" />');
+            $('#images').append('<img id="linkedin" src="linkedin.png" style="width: 100px; height: 100px" />');
+
+            $("#facebook").on("mouseenter", function(){
+                $('#div1').append('facebook')
+            })
+
+            $("#instagram").on("mouseenter", function(){
+                $('#div1').append('instagram')
+            })
+
+
+            $("#twitter").on("mouseenter", function(){
+            $('#div1').append('twitter')
+        })
+
+
+             $("#reddit").on("mouseenter", function(){
+            $('#div1').append('reddit')
+        })
+
+
+        $("#linkedin").on("mouseenter", function(){
+            $('#div1').append('linkedin')
+        })
+        })
+
+
+
+    </script>
+
+</head>
+<body>
+<span id="images">  </span>
+<div id="div1">In: </div>
+<div id="div2">Out: </div>
+<div id="div3">Mouse X: </div>
+
+</body>
+</html>
