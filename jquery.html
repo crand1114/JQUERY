@@ -6,6 +6,11 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
+            var site ="";
+            var x;
+            var y;
+
+
 
             $('#images').append('<img id="facebook" src="facebook.png" style="width: 100px; height: 100px"/>');
             $('#images').append('<img id=instagram src="instagram.png" style="width: 100px; height: 100px"/>');
@@ -13,28 +18,98 @@
             $('#images').append('<img id="reddit" src="reddit.png" style="width: 100px; height: 100px" />');
             $('#images').append('<img id="linkedin" src="linkedin.png" style="width: 100px; height: 100px" />');
 
+            $('#images').onmousemove(function(event){
+;
+            })
+
+            //facebook
             $("#facebook").on("mouseenter", function(){
-                $('#div1').append('facebook')
+                $('#facebook').fadeTo(1000,0.5);
+                site="facebook";
+                $('#div1').replaceWith('<div id="div1">In: </div>');
+                $('#div1').append(site);
+            })
+            $("#facebook").on("mouseleave", function(){
+                $('#facebook').fadeTo(1000,0.5);
+                site="facebook";
+                $('#div2').replaceWith('<div id="div2">Out: </div>');
+                $('#div2').append(site);
+            })
+            $("#facebook").on("dblclick", function(){
+                window.open("https://www.facebook.com/");
             })
 
+
+            //instagram
             $("#instagram").on("mouseenter", function(){
-                $('#div1').append('instagram')
+                $('#instagram').fadeTo(1000,0.5);
+                site="instagram";
+                $('#div1').replaceWith('<div id="div1">In: </div>');
+                $('#div1').append(site);
+        })
+            $("#instagram").on("mouseleave", function(){
+                $('#instagram').fadeTo(1000,0.5);
+                site="instagram";
+                $('#div2').replaceWith('<div id="div2">Out: </div>');
+                $('#div2').append(site);
+            })
+            $("#instagram").on("dblclick", function(){
+                window.open("https://www.instagram.com/");
             })
 
 
+            //twitter
             $("#twitter").on("mouseenter", function(){
-            $('#div1').append('twitter')
+                $('#twitter').fadeTo(1000,0.5);
+                site="twitter";
+                $('#div1').replaceWith('<div id="div1">In: </div>');
+                $('#div1').append(site);
         })
+            $("#twitter").on("mouseleave", function(){
+                $('#twitter').fadeTo(1000,0.5);
+                site="twitter";
+                $('#div2').replaceWith('<div id="div2">Out: </div>');
+                $('#div2').append(site);
+            })
+            $("#twitter").on("dblclick", function(){
+                window.open("https://www.twitter.com/");
+            })
 
 
+            //reddit
              $("#reddit").on("mouseenter", function(){
-            $('#div1').append('reddit')
+                 $('#reddit').fadeTo(1000,0.5);
+                 site="reddit";
+                 $('#div1').replaceWith('<div id="div1">In: </div>');
+                 $('#div1').append(site);
         })
+            $("#reddit").on("mouseleave", function(){
+                $('#reddit').fadeTo(1000,0.5);
+                site="reddit";
+                $('#div2').replaceWith('<div id="div2">Out: </div>');
+                $('#div2').append(site);
+            })
+            $("#reddit").on("dblclick", function(){
+                window.open("https://www.reddit.com/");
+            })
 
-
+            //linkedin
         $("#linkedin").on("mouseenter", function(){
-            $('#div1').append('linkedin')
+            $('#linkedin').fadeTo(1000,0.5);
+            site="linkedin";
+            $('#div1').replaceWith('<div id="div1">In: </div>');
+            $('#div1').append(site);
         })
+            $("#linkedin").on("mouseleave", function(){
+                $('#linkedin').fadeTo(1000,0.5);
+                site="linkedin";
+                $('#div2').replaceWith('<div id="div2">Out: </div>');
+                $('#div2').append(site);
+            })
+            $("#linkedin").on("dblclick", function(){
+                window.open("https://www.linkedin.com/");
+            })
+
         })
 
 
@@ -46,7 +121,7 @@
 <span id="images">  </span>
 <div id="div1">In: </div>
 <div id="div2">Out: </div>
-<div id="div3">Mouse X: </div>
+<div id="div3">Mouse X: ,Y: </div>
 
 </body>
 </html>
