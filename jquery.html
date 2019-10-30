@@ -7,8 +7,7 @@
     <script>
         $(document).ready(function(){
             var site ="";
-            var x;
-            var y;
+            var xy;
 
 
 
@@ -18,9 +17,9 @@
             $('#images').append('<img id="reddit" src="reddit.png" style="width: 100px; height: 100px" />');
             $('#images').append('<img id="linkedin" src="linkedin.png" style="width: 100px; height: 100px" />');
 
-            $('#images').onmousemove(function(event){
-;
-            })
+            $(images).mousemove(function(event){
+                $('#div3').text("Mouse X: "+ event.pageX+ ", Y: " + event.pageY);
+            });
 
             //facebook
             $("#facebook").on("mouseenter", function(){
