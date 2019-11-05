@@ -6,10 +6,13 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            var site ="";
-            var xy;
+                var site ="";
 
-
+            /*html elements added using jquery*/
+            $('#bdy').append('<span id="images">  </span>');
+            $('#bdy').append('<div id="div1">In: </div>');
+            $('#bdy').append('<div id="div2">Out: </div>');
+            $('#bdy').append('<div id="div3">Mouse X: ,Y: </div>');
 
             $('#images').append('<img id="facebook" src="facebook.png" style="width: 100px; height: 100px"/>');
             $('#images').append('<img id=instagram src="instagram.png" style="width: 100px; height: 100px"/>');
@@ -116,11 +119,8 @@
     </script>
 
 </head>
-<body>
-<span id="images">  </span>
-<div id="div1">In: </div>
-<div id="div2">Out: </div>
-<div id="div3">Mouse X: ,Y: </div>
+<body id="bdy">
+
 
 </body>
 </html>
